@@ -4,7 +4,8 @@ name: Construire l'APK Android
 on:
   push:
     branches:
-		- principale
+      - principale
+
 jobs:
   build:
     runs-on: ubuntu-latest
