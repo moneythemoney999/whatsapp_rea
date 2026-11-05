@@ -4,10 +4,7 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
-def flutterRoot = localProperties.getProperty('flutter.sdk')
-if (flutterRoot == null) {
-    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
-}
+def flutterRoot = localProperties?.getProperty('flutter.sdk') ?: System.getenv("FLUTTER_ROOT")
 
 android {
     namespace "com.exemple.messagerie"
@@ -28,8 +25,8 @@ android {
         applicationId "com.exemple.messagerie"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionCode flutterVersionCode != null ? flutterVersionCode.toInteger() : 1
+        versionName flutterVersionName != null ? flutterVersionName : "1.0.0"
     }
 
     buildTypes {
