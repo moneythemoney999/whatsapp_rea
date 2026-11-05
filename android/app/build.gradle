@@ -6,8 +6,8 @@ plugins {
 
 android {
     namespace "com.exemple.messagerie"
-    compileSdkVersion flutter.compileSdkVersion
-    targetSdkVersion flutter.targetSdkVersion
+    compileSdkVersion flutter.compileSdkVersion.toInteger()
+    targetSdkVersion flutter.targetSdkVersion.toInteger()
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId "com.exemple.messagerie"
         minSdkVersion 21
-        targetSdkVersion flutter.targetSdkVersion
+        targetSdkVersion flutter.targetSdkVersion.toInteger()
         versionCode flutterVersionCode != null ? flutterVersionCode.toInteger() : 1
         versionName flutterVersionName != null ? flutterVersionName : "1.0.0"
     }
