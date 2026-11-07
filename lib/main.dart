@@ -3,6 +3,7 @@ import 'ecrans/ecran_accueil.dart';
 
 /// Point d'entrée principal de l'application de messagerie.
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const ApplicationMessagerie());
 }
 
