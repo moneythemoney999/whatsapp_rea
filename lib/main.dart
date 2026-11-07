@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ecrans/ecran_accueil.dart';
 
 /// Point d'entrée principal de l'application de messagerie style WhatsApp.
 void main() {
